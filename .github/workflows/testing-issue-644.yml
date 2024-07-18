@@ -1,0 +1,31 @@
+name: Build Project
+
+on:
+  push:
+    branches: suyashgaonkar-issue644
+  # pull_request:
+  #   branches: [ master, ver/* ]
+
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: windows-latest
+    timeout-minutes: 20
+
+    name: Gradle Setup
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+      - uses: gradle/actions/wrapper-validation@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+          cache: 'gradle'
+      - name: Change Permissions
+        run: chmod +x ./gradlew
+      - name: Gradle Information
+        run: ./gradlew project tasks dependencies
