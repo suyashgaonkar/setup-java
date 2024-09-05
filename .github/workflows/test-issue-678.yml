@@ -15,7 +15,7 @@ jobs:
     container: docker:cli
     steps:
       - name: install JDK
-        run: apt-get install openjdk-11-jdk
+        run: sudo apt-get install openjdk-11-jdk
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
