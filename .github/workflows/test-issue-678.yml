@@ -12,16 +12,8 @@ on:
 jobs:
   test-docker:
     runs-on: ubuntu-latest
-    container: docker:cli
+    container: node:18
     steps:
-      - name: Install docker and docker-compose
-        run: |
-          apk add apt
-          apt -y update 
-          apt -y install sudo curl
-          curl -fsSL https://get.docker.com -o get-docker.sh
-          sudo sh ./get-docker.sh
-          apt-get install docker-compose-plugin
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
