@@ -12,7 +12,7 @@ on:
 jobs:
   test-docker:
     runs-on: ubuntu-latest
-    container: node:18
+    container: docker:cli
     steps:
       - name: Install JDK
         run: apt install openjdk-11-jdk
