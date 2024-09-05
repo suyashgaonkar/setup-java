@@ -16,6 +16,7 @@ jobs:
     steps:
       - name: Install docker and docker-compose
         run: |
+          apk add apt
           apt -y update 
           apt -y install sudo curl
           curl -fsSL https://get.docker.com -o get-docker.sh
