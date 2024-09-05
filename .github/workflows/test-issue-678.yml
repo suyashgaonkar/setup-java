@@ -22,12 +22,12 @@ jobs:
           distribution: temurin
           java-version: 11
       - name: Execute Java
-        run: echo $JAVA_HOME
+        run: |
+          echo $JAVA_HOME
+          echo $PATH
         # run: |
         #   which java
         #   type java
-        #   echo $JAVA_HOME
-        #   echo $PATH
         #   java --help
         
 
