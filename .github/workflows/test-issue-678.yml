@@ -1,4 +1,4 @@
-#testing the issue-678 (5)
+#testing the issue-678 (7)
 name: Build Project
 
 on:
@@ -12,15 +12,15 @@ on:
 jobs:
   test-docker:
     runs-on: ubuntu-latest
-    container: docker:cli
+    container: docker:
     steps:
-      - name: install JDK
-        run: sudo apt-get install openjdk-11-jdk
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 11
+      - name: Install JDK
+        run: apt install openjdk-11-jdk
       - name: Execute Java
         run: |
           which java
