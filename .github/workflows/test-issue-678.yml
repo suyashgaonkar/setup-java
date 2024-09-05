@@ -25,6 +25,7 @@ jobs:
         run: |
           echo $JAVA_HOME
           echo $PATH
+          type java
         # run: |
         #   which java
         #   type java
