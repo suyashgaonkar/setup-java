@@ -20,7 +20,9 @@ jobs:
           distribution: temurin
           java-version: 11
       - name: Execute Java
-        run: which java
+        run: |
+        which java
+        type java
         
 
   test-ubuntu:
