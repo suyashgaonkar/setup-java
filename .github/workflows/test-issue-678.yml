@@ -12,12 +12,7 @@ on:
 jobs:
   test-docker:
     runs-on: ubuntu-20.04
-    container: docker:cli
     steps:
-      - name: Check Docker version
-        run: docker --version
-      - name: Install Java
-        run: sudo apt install default-jre
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
