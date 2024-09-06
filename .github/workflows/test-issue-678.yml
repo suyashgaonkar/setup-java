@@ -12,7 +12,7 @@ on:
 jobs:
   test-docker:
     runs-on: ubuntu-20.04
-    container: docker:27
+    container: docker:cli
     steps:
       - name: Check Docker version
         run: docker --version
@@ -26,6 +26,7 @@ jobs:
           echo $JAVA_HOME
           echo $PATH
           type java
+          java -version
           # which java
           # java --help
         
