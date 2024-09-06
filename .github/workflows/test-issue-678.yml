@@ -27,7 +27,7 @@ jobs:
           echo "JRE HOME "$JRE_HOME
           export PATH=${JAVA_HOME}/bin/java
           echo "PATH "$PATH
-          java --help
+          java -help
   test-ubuntu:
     runs-on: ubuntu-latest
     container: ubuntu:latest
