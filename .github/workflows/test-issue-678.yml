@@ -21,8 +21,8 @@ jobs:
           java-version: 11
       - name: Execute Java
         run: |
-        which java
-        type java
+          which java
+          type java
         
 
   test-ubuntu:
