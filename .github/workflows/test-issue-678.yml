@@ -24,7 +24,8 @@ jobs:
           which java
           type java
           echo "JAVA HOME "$JAVA_HOME
-          export PATH=${JAVA_HOME}/bin
+          echo "JRE HOME "$JRE_HOME
+          export PATH=${JAVA_HOME}/bin/java
           echo "PATH "$PATH
           java --help
   test-ubuntu:
