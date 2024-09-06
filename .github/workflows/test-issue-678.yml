@@ -23,6 +23,7 @@ jobs:
         run: |
           which java
           type java
+          echo $JAVA_HOME
         
 
   test-ubuntu:
