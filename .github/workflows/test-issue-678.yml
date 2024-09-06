@@ -26,11 +26,8 @@ jobs:
           echo $JAVA_HOME
           echo $PATH
           type java
+          which java
           java --help
-        # run: |
-        #   which java
-        #   type java
-        #   java --help
         
 
   test-ubuntu:
