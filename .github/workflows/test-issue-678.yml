@@ -21,9 +21,9 @@ jobs:
           java-version: 11
       - name: Install Java
         run: |
-          RUN apk update && \
+          apk update && \
           apk upgrade
-          RUN apk add openjdk11=11.0.24_p8-r0
+          apk add openjdk11=11.0.24_p8-r0
       - name: Execute Java
         run: |
           which java
