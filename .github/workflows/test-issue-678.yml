@@ -19,6 +19,12 @@ jobs:
         with:
           distribution: temurin
           java-version: 11
+      - name: Install Java
+        run: |
+          apt-get update && \
+          apt-get install -y openjdk-11-jdk && \
+          apt-get install -y ant && \
+          apt-get clean;
       - name: Execute Java
         run: |
           which java
