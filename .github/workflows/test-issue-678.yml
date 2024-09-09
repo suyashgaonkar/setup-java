@@ -21,10 +21,9 @@ jobs:
           java-version: 11
       - name: Install Java
         run: |
-          apt-get update && \
-          apt-get install -y openjdk-11-jdk && \
-          apt-get install -y ant && \
-          apt-get clean;
+          RUN apk update && \
+          apk upgrade
+          RUN apk add openjdk11=11.0.24_p8-r0
       - name: Execute Java
         run: |
           which java
