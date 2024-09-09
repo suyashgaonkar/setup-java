@@ -19,8 +19,6 @@ jobs:
         with:
           distribution: temurin
           java-version: 12
-      - name: setup env vartiables
-        run: 
       - name: Execute Java
         run: |
           which java
