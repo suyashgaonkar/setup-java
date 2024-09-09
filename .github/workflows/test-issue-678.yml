@@ -18,14 +18,14 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 12
+          java-version: 11.0.13+8
       - name: Execute Java
         run: |
           which java
           type java
           echo "JAVA HOME "$JAVA_HOME
-          echo "JRE HOME "$JRE_HOME
-          export PATH=${JAVA_HOME}/bin/java
+          # echo "JRE HOME "$JRE_HOME
+          # export PATH=${JAVA_HOME}/bin/java
           echo "PATH "$PATH
           java -help
   test-ubuntu:
