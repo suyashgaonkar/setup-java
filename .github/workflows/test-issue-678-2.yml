@@ -57,7 +57,7 @@ jobs:
           echo $PATH
           java --help
   test-unbutu-new:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - name: Set up JDK
         uses: actions/setup-java@v4
@@ -65,11 +65,11 @@ jobs:
           distribution: temurin
           java-version: 11
       - name: Execute Java
-        run: |
-          which java
-          type java
-          echo "JAVA HOME "$JAVA_HOME
-          # echo "JRE HOME "$JRE_HOME
-          # export PATH=${JAVA_HOME}/bin/java
-          echo "PATH "$PATH
-          java -help
+        run: apt list --installed
+        #   which java
+        #   type java
+        #   echo "JAVA HOME "$JAVA_HOME
+        #   # echo "JRE HOME "$JRE_HOME
+        #   # export PATH=${JAVA_HOME}/bin/java
+        #   echo "PATH "$PATH
+        #   java -help
