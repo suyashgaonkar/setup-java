@@ -56,7 +56,7 @@ jobs:
           echo $JAVA_HOME
           echo $PATH
           java --help
-  test-ubuntu:
+  test-unbutu-new:
     runs-on: ubuntu-24.04
     steps:
       - name: Set up JDK
